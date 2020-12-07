@@ -1,0 +1,65 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 528px;
+  height: 581px;
+
+  padding: 40px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 4px;
+}
+
+.modal-close {
+  display: block;
+  justify-content: flex-end;
+}
+
+.btn-close {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover .close,
+  &:focus .close {
+    fill: $button-bcg-color;
+  }
+}
+.close {
+  display: flex;
+  fill: #000000;
+}

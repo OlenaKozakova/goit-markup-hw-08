@@ -1,0 +1,145 @@
+.footer {
+  background-color: $dark-bcg;
+  display: flex;
+}
+
+.footer .logo {
+  margin-top: 0px;
+}
+
+.logo .logo-white {
+  color: $white;
+}
+
+.logo-ftr {
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.footer .link-contact {
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.addr-container {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.link-contact:hover,
+.link-contact:focus {
+  color: $button-bcg-color;
+}
+
+.address {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.714;
+  color: $white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer .text-title {
+  color: $white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 20px;
+}
+
+.footer .social {
+  display: block;
+  width: 206px;
+  height: 80px;
+  margin-top: 72px;
+  padding: 0px;
+}
+.footer .social-icon {
+  fill: $white;
+}
+
+.footer .social-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+footer .social-link:hover,
+footer .social-link:focus {
+  background-color: $button-bcg-color;
+}
+
+.social-footer {
+  margin-left: 72px;
+  margin-right: 0px;
+}
+
+.mailing {
+  padding-top: 72px;
+  margin-right: 0px;
+  margin-left: 92px;
+}
+
+.form-footer {
+  display: flex;
+}
+
+.field-footer {
+  height: 50px;
+  width: 358px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: $dark-bcg;
+  border-radius: 4px;
+
+  color: $white;
+}
+
+.btn-footer {
+  width: 200px;
+  height: 50px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: 12px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+
+  align-items: center;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $white;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $button-bcg-color;
+    background-color: $white;
+  }
+
+  &:hover .btn-icon,
+  &:focus .btn-icon {
+    color: $button-bcg-color;
+    fill: $button-bcg-color;
+  }
+}
+
+.btn-icon {
+  fill: $white;
+  align-items: center;
+  vertical-align: middle;
+}

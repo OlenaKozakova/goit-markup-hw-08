@@ -1,0 +1,29 @@
+.section-gallery {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+.gallery-item {
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+.signature {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  left: auto;
+  top: 1435px;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 27px;
+
+  color: #ffffff;
+}

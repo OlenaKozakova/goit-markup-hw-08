@@ -1,0 +1,32 @@
+.hero {
+  background-color: $dark-bcg;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.hero-container {
+  max-width: 696px;
+}
+
+.hero-name {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $white;
+}

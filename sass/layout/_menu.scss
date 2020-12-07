@@ -1,0 +1,29 @@
+.menu {
+  display: inline-flex;
+}
+
+.menu-item .menu-link {
+  position: relative;
+}
+
+.menu-link:hover:after,
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30.5px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $button-bcg-color;
+  margin-top: 16px;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
