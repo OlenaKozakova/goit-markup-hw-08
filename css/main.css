@@ -17,6 +17,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 2px solid tomato;
 }
 
 img {
@@ -56,11 +57,29 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 h1,
@@ -190,17 +209,30 @@ li {
 }
 
 .advantages {
-  display: flex;
+  width: 100%;
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .advantages {
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages .advantages-item::before {
   content: '';
   display: block;
   height: 120px;
-  width: 270px;
+  width: 100%;
   margin-bottom: 30px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -225,18 +257,28 @@ li {
   background-image: url(../images/index/astronaut.svg);
 }
 
-.advantages-item {
-  flex-basis: calc(100% / 4 - 30px);
-  max-width: 270px;
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .advantages-item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
 }
 
-.advantages-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .advantages-item {
+    width: calc((100% - 3 * 30px) / 4);
+  }
 }
 
 .advantages-title {
   margin-top: 93px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .advantages-title {
+    text-align: center;
+  }
 }
 
 .advantages-text {
@@ -248,19 +290,33 @@ li {
 .section-gallery {
   padding-top: 0;
   padding-bottom: 94px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-gallery {
+    display: block;
+  }
 }
 
 .gallery-item {
+  position: relative;
+  width: 370px;
   flex-basis: calc(100% / 3 - 30px);
 }
 
-.signature {
+.signature-block {
   position: absolute;
-  width: 370px;
-  height: 70px;
-  left: auto;
-  top: 1435px;
-  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.signature {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -268,7 +324,7 @@ li {
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 27px;
+  margin-bottom: 0;
   color: #ffffff;
 }
 
@@ -277,7 +333,6 @@ li {
 }
 
 .team-grid {
-  flex-basis: calc(100% / 4 - 30px);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -295,10 +350,11 @@ li {
 }
 
 .social-item {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px;
-  padding: 0px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
 }
 
 .client {
@@ -306,6 +362,45 @@ li {
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
+}
+
+.client-box {
+  display: block;
+  flex-basis: calc(100% / 6 - 30px);
+}
+
+:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link-client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-client:hover, .link-client:focus {
+  border-color: #2196f3;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-client:hover .icon,
+.link-client:focus .icon {
+  fill: #2196f3;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+  fill: #afb1b8;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -909,44 +1004,5 @@ nav a.active {
 
 .social-icon {
   fill: #afb1b8;
-}
-
-.client-box {
-  display: block;
-  flex-basis: calc(100% / 6 - 30px);
-}
-
-.client-box :not(:last-child) {
-  margin-right: 30px;
-}
-
-.link-client {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 90px;
-  border: 1px solid #afb1b8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-client:hover, .link-client:focus {
-  border-color: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-client:hover .icon,
-.link-client:focus .icon {
-  fill: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon {
-  fill: #afb1b8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*# sourceMappingURL=main.css.map */
