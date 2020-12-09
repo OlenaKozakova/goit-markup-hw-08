@@ -24,21 +24,36 @@
 
 .logo {
   margin-top: 24px;
-  margin-right: 93px;
+  margin-right: 88px;
   margin-bottom: 25px;
   text-decoration: none;
   font-family: Raleway;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--button-bcg-color);
+  font-size: 24px;
+  line-height: 1.375;
+  color: $button-bcg-color;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo-black {
   font-family: Raleway;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--dark-color);
+  font-size: 24px;
+  line-height: 1.375;
+  color: $dark-color;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-black {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .menu-nav {
@@ -66,6 +81,7 @@
 @media screen and (min-width: 1200px) {
   .menu-contact {
     display: flex;
+    margin-left: auto;
   }
 }
 
@@ -106,6 +122,7 @@
 .link {
   text-decoration: none;
   font-weight: 500;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--dark-color);
@@ -128,28 +145,26 @@
 }
 
 .header-icon {
-  fill: var(--main-color);
+  fill: $main-color;
   margin-right: 10px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav a.active {
-  color: var(--button-bcg-color);
+  color: $button-bcg-color;
 }
 
 .contact-link {
-  display: inline-block;
+  display: flex;
   align-items: center;
-  justify-content: left;
-  color: var(--main-color);
+  justify-content: center;
+  color: $main-color;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  //display: flex;
-  align-items: center;
   justify-content: center;
-  margin-right: auto;
+  margin-right: 0;
 }
