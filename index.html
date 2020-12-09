@@ -22,14 +22,14 @@
   <body>
     <!--основная навигация по сайту-->
     <!--добавлена рамка в header-->
-    <!--<header class="header">
+    <header class="header">
       <div>
         <div class="container header-container">
           <nav class="navigation">
             <a class="logo" href="./index.html">
               Web<span class="logo-black">Studio</span>
             </a>
-            <ul class="list menu">
+            <ul class="list menu menu-nav">
               <li class="menu-item">
                 <a href="./index.html" class="link menu-link active">Студия</a>
               </li>
@@ -41,7 +41,7 @@
               </li>
             </ul>
           </nav>
-          <ul class="list menu">
+          <ul class="list menu menu-contact">
             <li class="contact-item icon-contact">
               <a href="mailto:info@devstudio.com" class="link contact-link">
                 <svg class="header-icon" width="16" height="12">
@@ -50,7 +50,7 @@
                 info@devstudio.com</a
               >
             </li>
-            <li class="contact-item">
+            <li class="contact-item icon-contact">
               <a href="tel:+380961111111" class="link contact-link">
                 <svg class="header-icon" width="10" height="16">
                   <use xlink:href="./images/sprite.svg#icon-phone"></use>
@@ -61,11 +61,11 @@
           </ul>
         </div>
       </div>
-    </header> -->
+    </header> 
 
     <main>
       <!--Главное о странице-->
-     <!-- <section class="section hero">
+      <section class="section hero">
         <div class="hero-img overley">
           <h1 class="hero-container hero-name">
             Эффективные решения для вашего бизнеса
@@ -131,7 +131,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!--Преимущества компании-->
       <section class="section">
         <div class="container">
@@ -515,12 +515,16 @@
         <div class="mailing">
           <h3 class="text-title">Подпишитесь на рассылку</h3>
           <form class="form-footer">
-            <input type="email" class="field-footer" placeholder="E-mail">
-            <button type="submit" class="btn-footer">Подписаться
+            <div>
+              <input type="email" class="field-footer" placeholder="E-mail">
+            </div>
+            <div>
+              <button type="submit" class="btn-footer">Подписаться
               <svg class="btn-icon" width="24" height="24">
                 <use xlink:href="./images/sprite.svg#icon-paper-plane"></use>
               </svg>
             </button>
+            </div>
           </form>
         </div>
       </div>

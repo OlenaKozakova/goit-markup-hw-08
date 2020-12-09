@@ -110,12 +110,15 @@ footer .social-link:focus {
 }
 
 .form-footer {
-  display: flex;
+  @include for-size(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .field-footer {
   height: 50px;
-  width: 358px;
+  width: 450px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -124,6 +127,10 @@ footer .social-link:focus {
   border-radius: 4px;
 
   color: $white;
+
+  @include for-size(desktop) {
+    width: 358px;
+  }
 }
 
 .btn-footer {
@@ -157,6 +164,12 @@ footer .social-link:focus {
   &:focus .btn-icon {
     color: $button-bcg-color;
     fill: $button-bcg-color;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .btn-footer {
+    margin-top: 20px;
   }
 }
 
