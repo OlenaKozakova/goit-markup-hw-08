@@ -99,7 +99,7 @@
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--button-bcg-color);
+  background-color: $button-bcg-color;
   margin-top: 16px;
 }
 
@@ -125,21 +125,21 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--dark-color);
+  color: $dark-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
 .link:focus {
-  color: var(--button-bcg-color);
+  color: $button-bcg-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover .header-icon,
 .link:focus .header-icon {
-  fill: var(--button-bcg-color);
+  fill: $button-bcg-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
