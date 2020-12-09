@@ -118,7 +118,8 @@ footer .social-link:focus {
 
 .field-footer {
   height: 50px;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -129,7 +130,7 @@ footer .social-link:focus {
   color: $white;
 
   @include for-size(desktop) {
-    width: 358px;
+    max-width: 358px;
   }
 }
 
