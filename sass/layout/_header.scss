@@ -130,6 +130,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .link {
+    font-size: 16px;
+  }
+}
+
 .link:hover,
 .link:focus {
   color: $button-bcg-color;

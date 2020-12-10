@@ -263,6 +263,12 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .link {
+    font-size: 16px;
+  }
+}
+
 .link:hover,
 .link:focus {
   color: #2196f3;
@@ -304,7 +310,6 @@ nav a.active {
 
 .hero {
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -313,6 +318,42 @@ nav a.active {
   justify-content: center;
   align-items: center;
   height: 600px;
+}
+
+@media not all, screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mobile_hero_2x.jpg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mobile_hero_1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tablet_hero_1x.jpg);
+  }
+}
+
+@media not all, screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tablet_hero_2x.jpg);
+  }
+}
+
+@media not all, screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/desktop_hero_2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/desktop_hero_2x.jpg);
+  }
 }
 
 .hero-container {
@@ -915,6 +956,77 @@ footer .social-link:focus {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  color: #212121;
+}
+
+.button-menu {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  fill: #212121;
+}
+
+.menu-icon {
+  fill: #212121;
+}
+
+.button-menu:hover .menu-icons,
+.button-menu:focus .menu-icons {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.mobile-nav {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-size: 18px;
+  line-height: 1.166;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.mobile-menu {
+  margin-bottom: 60px;
+}
+
+.mobile-menu .item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu .link.current {
+  padding-bottom: 12px;
+}
+
+.link.current {
+  color: #2196f3;
+}
+
+.mobile-menu .link {
+  position: relative;
+  display: inline-block;
   color: #212121;
 }
 
