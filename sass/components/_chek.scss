@@ -7,7 +7,8 @@
   font-size: 12px;
   line-height: 1.71;
   padding-top: 20px;
-  padding-left: 30px;
+  padding-left: 24px;
+  width: auto;
 
   @include for-size(desktop) {
     font-size: 14px;
@@ -18,7 +19,7 @@
   position: absolute;
   width: 16px;
   height: 15px;
-  margin-left: -22px;
+  margin-left: -24px;
   background-image: url(../images/index/check-box.svg);
 }
 
@@ -42,6 +43,7 @@
 
 .agreement {
   display: inline-block;
+  justify-content: right;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;

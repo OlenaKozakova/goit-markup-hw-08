@@ -7,14 +7,14 @@
   float: right;
 }
 
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
+.menu-button:focus,
+.menu-button:hover {
+  fill: $button-bcg-color;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
-  .mobile-menu-container {
+@media screen and (min-width: 768px) {
+  .menu-button {
     display: none;
   }
 }

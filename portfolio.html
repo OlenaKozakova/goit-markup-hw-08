@@ -16,14 +16,24 @@
   <!--основная навигация по сайту-->
   <!--добавлена рамка в header-->
   <header class="header">
-    <div>
-      <div class="container header-container">
-        <nav class="navigation">
-          <a class="logo" href="./index.html">
-            Web<span class="logo-black">Studio</span>
-          </a>
-          <ul class="list menu menu-nav">
-            <li class="menu-item">
+    <!--меню для телефона-->
+    <div class="container header-container">
+      <nav class="navigation">
+        <a class="logo" href="./index.html">
+          Web<span class="logo-black">Studio</span>
+        </a>
+        <!--mobile menu-->
+        <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container"
+          data-menu-button>
+          <svg class="" width="40" height="40" aria-label="переключатель мобильного меню">
+            <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            <use class="icon-close" href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu-container" id="menu-container" data-menu>
+          <ul class="list menu mobile-menu-nav">
+            <li class="menu-item menu-desktop-index">
               <a href="./index.html" class="link menu-link">Студия</a>
             </li>
             <li class="menu-item">
@@ -33,24 +43,56 @@
               <a href="" class="link menu-link">Контакты</a>
             </li>
           </ul>
-        </nav>
-        <ul class="list menu menu-contact">
-          <li class="contact-item icon-contact">
-            <a href="mailto:info@devstudio.com" class="link contact-link">
-              <svg class="header-icon" width="16" height="12">
-                <use xlink:href="./images/sprite.svg#icon-leter"></use>
-              </svg>
-              info@devstudio.com</a>
+
+          <ul class="list menu mobile-menu-contact">
+            <li class="contact-item icon-contact">
+              <a href="mailto:info@devstudio.com" class="link contact-link">
+                <svg class="header-icon" width="16" height="12">
+                  <use xlink:href="./images/sprite.svg#icon-leter"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="contact-item">
+              <a href="tel:+380961111111" class="link contact-link">
+                <svg class="header-icon" width="10" height="16">
+                  <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!--desktop and tablet menu-->
+        <ul class="list menu menu-nav">
+          <li class="menu-item menu-desktop-index">
+            <a href="./index.html" class="link menu-link">Студия</a>
           </li>
-          <li class="contact-item">
-            <a href="tel:+380961111111" class="link contact-link">
-              <svg class="header-icon" width="10" height="16">
-                <use xlink:href="./images/sprite.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a>
+          <li class="menu-item">
+            <a href="./portfolio.html" class="link menu-link  active">Портфолио</a>
+          </li>
+          <li class="menu-item">
+            <a href="" class="link menu-link">Контакты</a>
           </li>
         </ul>
-      </div>
+      </nav>
+
+      <ul class="list menu menu-contact">
+        <li class="contact-item icon-contact">
+          <a href="mailto:info@devstudio.com" class="link contact-link">
+            <svg class="header-icon" width="16" height="12">
+              <use xlink:href="./images/sprite.svg#icon-leter"></use>
+            </svg>
+            info@devstudio.com</a>
+        </li>
+        <li class="contact-item">
+          <a href="tel:+380961111111" class="link contact-link">
+            <svg class="header-icon" width="10" height="16">
+              <use xlink:href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            +38 096 111 11 11</a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -301,6 +343,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 
 </html>

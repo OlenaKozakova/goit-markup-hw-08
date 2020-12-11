@@ -11,9 +11,15 @@
 @media screen and (min-width: 768px) {
   .header-container {
     display: flex;
-    justify-content: flex-end;
+    //justify-content: flex-end;
     align-items: center;
     height: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-container {
+    padding: 0;
   }
 }
 
@@ -24,8 +30,8 @@
 }
 
 .logo {
+  display: block;
   margin-top: 24px;
-  margin-right: 88px;
   margin-bottom: 25px;
   text-decoration: none;
   font-family: Raleway;
@@ -64,6 +70,9 @@
 @media screen and (min-width: 768px) {
   .menu-nav {
     display: flex;
+    //align-items: center;
+    //width: auto;
+    margin-left: 88px;
   }
 }
 
@@ -76,6 +85,12 @@
 @media screen and (min-width: 768px) {
   .menu-contact {
     display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-item:not(:first-child) {
+    padding-top: 10px;
   }
 }
 
@@ -224,6 +239,12 @@ nav a.active {
   align-items: center;
   justify-content: center;
   color: $main-color;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link {
+    justify-content: start;
+  }
 }
 
 .navigation {
