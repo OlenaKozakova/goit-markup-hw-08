@@ -303,6 +303,7 @@ nav a.active {
 
 .navigation {
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   margin-right: 0;
@@ -462,10 +463,18 @@ nav a.active {
   }
 }
 
+.gallery-list {
+  display: flex;
+}
+
 .gallery-item {
   position: relative;
   width: 370px;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-left: auto;
+}
+
+.gallery-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .signature-block {
@@ -957,6 +966,26 @@ footer .social-link:focus {
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .button {

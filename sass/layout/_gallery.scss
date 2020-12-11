@@ -9,11 +9,18 @@
     display: block;
   }
 }
+.gallery-list {
+  display: flex;
+}
 
 .gallery-item {
   position: relative;
   width: 370px;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-left: auto;
+}
+
+.gallery-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .signature-block {
